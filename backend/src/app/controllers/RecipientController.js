@@ -5,7 +5,7 @@ import Recipient from '../model/Recipient';
 class RecipientController {
   async index(req, res) {
     const recipient = await Recipient.findAll({
-      attributes: ['id','name', 'street', 'complement', 'number'],
+      attributes: ['id', 'name', 'street', 'complement', 'number'],
     });
 
     return res.json(recipient);
